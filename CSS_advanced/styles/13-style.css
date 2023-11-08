@@ -61,11 +61,11 @@ body {
 
 a:link {
 	color: var(--text-color);
-	text-decoration:  none;
+	text-decoration: none;
 }
 
 a:visited {
-	font-size: italic;
+	font-style: italic;
 }
 
 a:hover {
