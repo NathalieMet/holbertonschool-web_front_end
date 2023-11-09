@@ -350,13 +350,13 @@ ul.row {
 	position: relative;
 }
 
-.card-work:a, .card-title:a  {
+.card-work a, .card-title a  {
 	display: block;
 	text-decoration: none;
 	padding-top: 45%;
 }
 
-.card-title, .card-work link:a {
+.card-title, .card-work a {
 	position: absolute;
 	position: 0;
 	content: "";
