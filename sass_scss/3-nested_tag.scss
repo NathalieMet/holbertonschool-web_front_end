@@ -1,0 +1,12 @@
+/* Write a Sass file that assigns:
+No margin or padding in body tags
+Margin 10px to all of the p tags inside body tags
+You must use nested declarations */
+
+body {
+	padding: 0px;
+	margin: 0px;
+	p {
+		margin: 10px;
+	}
+}
