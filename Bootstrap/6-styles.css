@@ -35,3 +35,10 @@ a:focus {
 	color: white
 }
 
+.card-header:first-child {
+	border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #E0003C !important;
+}
