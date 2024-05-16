@@ -1,3 +1,5 @@
+//Closure Scope Chain
+
 let globalVariable = 'Welcome';
 
 function outer() {

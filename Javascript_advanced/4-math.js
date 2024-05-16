@@ -1,3 +1,5 @@
+//Complex Closure
+
 function divideBy(firstNumber) {
 	return function(secondNumber) {
 		return secondNumber / firstNumber;

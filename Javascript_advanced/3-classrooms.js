@@ -1,3 +1,5 @@
+//Closure and loops
+
 function createClassRoom(numbersOfStudents) {
 	function studentSeat(seat) {
 		return function() {
