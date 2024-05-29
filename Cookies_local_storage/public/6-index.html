@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	<title>Shopping Cart</title>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+</head>
+
+<body>
+	<script>
+
+		const availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+
+		function isSessionStorageAvailable() {
+			var test = 'test';
+			try {
+				sessionStorage.setItem(test, test);
+				sessionStorage.removeItem(test);
+				return true;
+			} catch (e) {
+				return false;
+			}
+		}
+
+		function addItemToCart(item) {
+			sessionStorage.setItem(item, 'true');
+		}
+
+		function createStore() {
+			const list = document.createElement('ul');
+			document.body.appendChild(list);
+
+			availableItems.forEach(function (item) {
+				const element = document.createElement('li');
+				const item_name = document.createTextNode(item);
+				element.appendChild(item_name);
+				list.appendChild(element);
+
+				element.addEventListener('click', function () {
+					addItemToCart(item);
+				});
+			});
+		}
+
+		function displayCart() {
+			if (sessionStorage.length === 0) {
+				return;
+			}
+				const itemCount = sessionStorage.length;
+				const paragraph = document.createElement('p');
+				const text = document.createTextNode(`You previously had ${itemCount} items in your cart`);
+				paragraph.appendChild(text);
+				document.body.appendChild(paragraph);
+		}
+
+		if (isSessionStorageAvailable()) {
+			createStore();
+			displayCart();
+		} else {
+			alert("Sorry, your browser does not support Web storage. Try again with a better one");
+		}
+
+	</script>
+
+
+</body>
+
+</html>
